@@ -1,0 +1,9 @@
+Grayson Buchholz
+lab02
+
+1. $
+2. /Users/grayson
+3. Applications, Desktop, Documents, Downloads, Library, Movies, Music, Pictures, Public, Virtual Machines.localized, firmware, node_modules, package-lock.json
+4. /Users/grayson/Desktop/cmps2300
+5. mv lab1.txt cmps2300/ 
+6. The * and & operators work as pointer declarations and address references. * is used to assign pointers while & is used for address references. 
