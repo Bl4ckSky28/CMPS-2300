@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# Have it print one line to the terminal window and another line 
+# into a results file.
+
+echo "Line 1"
+echo "Line in results" >> handin.txt
+
+# Make your script take 4 command line arguments. 
+
+# Number
+echo "The first parameter was ${1}"
+number1=${1}
+
+# Number
+echo "The second parameter was ${2}"
+number2=${2}
+
+# FileName
+echo "The third parameter was ${3}"
+fileName=${3}
+
+# FolderName
+echo "The fourth parameter was ${4}"
+folderName=${4}
+
+echo $number2
+
+
+# Conditional Statements
+
+# Which number is bigger
+if [[ $number1 -lt $number2 ]]; then
+	echo "number1 > number2"
+else
+	echo "number2 > number1"
+fi
+
+# Does file exist
+if [[ -e $fileName ]]; then
+	echo "file exists"
+else
+	echo "file does not exist"
+fi
+
+# Does folder exist
+if [[ -e $folderName ]]; then
+	echo "folder exists"
+else 
+	echo "folder does not exist"
+fi
+
+# For loop that prints files in folder
+for file in *; do
+	echo ${file}
+done
+
+exit
