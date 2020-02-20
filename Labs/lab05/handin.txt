@@ -1,0 +1,25 @@
+1. 4 physical frames exist
+
+2. 2^12 virtual pages can exist in this system. Each page is 1 MB in size.
+
+3. The address 0x0012D687 has a decimal value of 1234567. This is a binary number of length 21. Each virtual address must be 32 bits long, so 11 leading zeroes must be added, which still yields 124567 in hex. With first 12 bits being VPN, the VPN is 1, meaning page 1. The OS then indexes the page table and looks for the physical frame that page 1 lies in. The PFN will then be substitued for the part of the address that was the VPN. This is the address to physical memory. The OS then goes to the corresponding physical page frame. The next 28 bits are then used to specify the exact byte within the page frame. This is the exact address. 
+
+4. 0xE12C = 0x312C
+	0x3A9D = 0xAA9D
+	0xA9D9 = 0x59D9
+	0x7001 = 0xF001
+	0xACA1 = 0x5CA1
+
+5. 0xC001 corresponds to PFN number 12. 12 isn't mapped in the page table, so it would generate a fault. 
+
+6. Page table size changes as the address space grows by increasing to account for the new pages need to cover the entire address space. 
+
+7. As the page size increases, the page table size should decrease as a result of there being less pages to cover the entire address space.
+
+8. Using big pages in general would be a waste of memory. Most processes use very little memory. 
+
+9. As the percentage of pages allocated increases more memory access operations become valid. 
+
+10. 1 is unrealistic because the size is too small. 
+
+11. The program won't work when page size is greater than address space available, when address space size is greater than physical memory, when the page size, the physical memory, or the address space is negative. 
